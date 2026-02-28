@@ -73,7 +73,7 @@ def verify_token(token: str):
 
 
 class Handler(BaseHTTPRequestHandler):
-    def send_json(self, status: int, body: dict | list):
+    def send_json(self, status: int, body):
         data = json.dumps(body, ensure_ascii=False).encode('utf-8')
         self.send_response(status)
         self.send_header('Content-Type', 'application/json; charset=utf-8')

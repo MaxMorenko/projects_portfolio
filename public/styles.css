@@ -1,0 +1,32 @@
+:root { font-family: Arial, sans-serif; color-scheme: light dark; }
+body { margin: 0; background: #0f172a; color: #e2e8f0; }
+.container { max-width: 900px; margin: 0 auto; padding: 24px; }
+h1 { margin-bottom: 8px; }
+.subtitle { color: #94a3b8; margin-bottom: 20px; }
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #334155;
+}
+.tabs { display: flex; gap: 8px; margin-bottom: 12px; }
+.tabs button.active { background: #2563eb; }
+input, button, select {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+button { cursor: pointer; background: #2563eb; border: none; }
+button.ghost { background: #475569; width: auto; }
+.hidden { display: none; }
+.header-row { display: flex; justify-content: space-between; align-items: center; }
+.inline-form { display: grid; grid-template-columns: 1.3fr 1fr 1.5fr auto; gap: 8px; align-items: end; }
+.projects { list-style: none; padding: 0; margin-top: 12px; }
+.projects li { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 10px; margin-bottom: 8px; }
+#message { min-height: 24px; color: #93c5fd; }

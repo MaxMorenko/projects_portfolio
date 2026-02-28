@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projects Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Projects Portfolio</h1>
+      <p class="subtitle">Управляйте портфелем проектов и храните Jira-интеграцию в одном месте.</p>
+
+      <section class="card" id="authCard">
+        <h2>Регистрация / Вход</h2>
+        <div class="tabs">
+          <button id="showRegister" class="active">Регистрация</button>
+          <button id="showLogin">Вход</button>
+        </div>
+
+        <form id="registerForm">
+          <input name="name" placeholder="Имя" required />
+          <input name="email" placeholder="Email" type="email" required />
+          <input name="password" placeholder="Пароль" type="password" required />
+          <button type="submit">Создать аккаунт</button>
+        </form>
+
+        <form id="loginForm" class="hidden">
+          <input name="email" placeholder="Email" type="email" required />
+          <input name="password" placeholder="Пароль" type="password" required />
+          <button type="submit">Войти</button>
+        </form>
+      </section>
+
+      <section id="appSection" class="hidden">
+        <section class="card">
+          <div class="header-row">
+            <h2>Профиль</h2>
+            <button id="logoutBtn" class="ghost">Выйти</button>
+          </div>
+          <p id="meInfo"></p>
+        </section>
+
+        <section class="card">
+          <h2>Интеграция Jira</h2>
+          <form id="jiraForm">
+            <input name="jiraBaseUrl" placeholder="https://yourcompany.atlassian.net" />
+            <input name="jiraEmail" placeholder="Email Jira" type="email" />
+            <input name="jiraApiToken" placeholder="API Token Jira" type="password" />
+            <button type="submit">Сохранить интеграцию</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <h2>Портфель проектов</h2>
+          <form id="projectForm" class="inline-form">
+            <input name="title" placeholder="Название проекта" required />
+            <select name="status" required>
+              <option value="Planned">Planned</option>
+              <option value="In Progress">In Progress</option>
+              <option value="On Hold">On Hold</option>
+              <option value="Done">Done</option>
+            </select>
+            <input name="description" placeholder="Краткое описание" />
+            <button type="submit">Добавить</button>
+          </form>
+          <ul id="projectsList" class="projects"></ul>
+        </section>
+      </section>
+
+      <p id="message"></p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
